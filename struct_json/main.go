@@ -64,8 +64,8 @@ func main() {
 	// JSON反序列化：JSON格式的字符串 -> Go语言中的数据
 	jsonStr := `{"Title":"火箭101","Students":[{"ID":0,"Name":"小王子"},{"ID":1,"Name":"哪吒"},{"ID":2,"Name":"stu02"}]}`
 
-	// 只有传指针才能修改内部的值
 	var c2 class
+	// 只有传指针才能修改内部的值
 	// 将字符串强转为 []byte 格式，并且将转换之后的数据存储到c2中
 	err = json.Unmarshal([]byte(jsonStr), &c2)
 	if err != nil {
